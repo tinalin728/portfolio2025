@@ -1,0 +1,10 @@
+@import './font.css';
+@import './global.css';
+@import './button.css';
+@import './dock.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

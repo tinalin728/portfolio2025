@@ -1,0 +1,101 @@
+
+@layer base {
+  .dock[data-vars] {
+    --lift: 10px;
+    --grow: 0.28;
+    --glow: 0.1;
+    --dock-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    --glow-color: rgba(0, 0, 0, 0.2);
+    --bright-mult: 0.15;
+  }
+  .dark .dock[data-vars] {
+    --dock-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    --glow-color: rgba(255,255,255,var(--glow));
+    --bright-mult: 0.5;
+  }
+
+  @property --a {
+    syntax: "<angle>";
+    initial-value: 148deg;
+    inherits: true;
+  }
+}
+
+@layer components {
+  .dock {
+    @apply bg-[radial-gradient(70%_160%_at_50%_120%,#F2F2F2_0%,rgba(214,214,214,0.2)_60%),linear-gradient(180deg,#e2e2e2_0%,#FFFFFF_100%)]
+           shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_3px_8px_rgba(0,0,0,0.1)];
+  }
+  .dark .dock {
+    @apply bg-[radial-gradient(60%_140%_at_50%_100%,rgba(255,255,255,.14)_0%,rgba(255,255,255,0)_60%),linear-gradient(180deg,#161616_0%,#222222_100%)]
+           shadow-none;
+  }
+
+  .dock-btn {
+    --t: 0;
+    will-change: transform, filter;
+
+    @apply relative grid place-items-center rounded-full p-[.9rem];
+    isolation: isolate;
+    border-radius: 9999px;
+    --bw: 1px;
+    --a: 148deg;
+    transition: transform 0.22s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transform: translateY(calc(var(--t) * -1 * var(--lift)))
+      scale(calc(1 + var(--t) * var(--grow)));
+
+    filter: brightness(calc(1 + var(--t) * 0.1))
+      drop-shadow(0 1px calc(6px * var(--t)) rgba(0, 0, 0, 0.05))
+      drop-shadow(0 0 calc(8px * var(--t)) rgba(255, 255, 255, 0.6));
+
+    box-shadow: var(--dock-shadow),
+      0 0 calc(8px * var(--t)) calc(1px * var(--t)) var(--glow-color);
+
+    transition: transform 0.2s linear, filter 0.2s linear,
+      box-shadow 0.2s linear, background-color 0.2s linear,
+      border-color 0.2s linear;
+  }
+
+  .dark .dock-btn {
+    @apply border-greyscale-400;
+    filter: brightness(calc(1 + var(--t) * 0.5));
+  }
+
+  .dock-btn::before {
+    content: "";
+    position: absolute;
+    inset: -0px;
+    border-radius: inherit;
+    padding: var(--bw);
+    pointer-events: none;
+
+    -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    background: linear-gradient(
+      var(--a),
+      rgba(255, 255, 255, 1),
+      rgba(231, 231, 231, 1) 27%,
+      rgb(213, 213, 213) 51%,
+      rgba(255, 255, 255, 0.5) 62%,
+      rgba(255, 255, 255, 1)
+    );
+
+    transition: --a 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .dark .dock-btn::before {
+    background: linear-gradient(
+      var(--a),
+      rgba(255, 255, 255, 0.76),
+      rgba(255, 255, 255, 0.13) 27%,
+      rgba(255, 255, 255, 0.05) 51%,
+      rgba(255, 255, 255, 0.05) 62%,
+      rgba(255, 255, 255, 0.35)
+    );
+  }
+
+  .dock-btn:hover::before { --a: calc(148deg + 180deg); }
+}

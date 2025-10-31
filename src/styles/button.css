@@ -1,0 +1,85 @@
+
+@property --a {
+  syntax: '<angle>';
+  initial-value: 148deg;
+  inherits: false;
+}
+
+.button {
+  position: relative;
+  isolation: isolate;
+  /* border: 1px solid transparent; */
+  border-radius: 9999px;
+  --bw: 1px;
+  --a: 148deg;                      
+  transition: transform .22s cubic-bezier(.22,.61,.36,1);
+  width: fit-content;
+box-shadow: -0.4px 0px 1px 0 rgba(140, 140, 140, 0.25), .4px 0.5px 8px 0 rgba(91, 91, 91, 0.15);
+}
+
+.dark .button {
+      /* border: 1px solid #2A2A2A; */
+      background:transparent !important;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: -0px;
+  border-radius: inherit;
+  padding: var(--bw);
+  pointer-events: none;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+    background: linear-gradient(
+    var(--a),
+    rgba(255, 255, 255, 1),
+    rgba(231, 231, 231, 1) 27%,
+    rgb(213, 213, 213) 51%,
+    rgba(255, 255, 255, 0.5) 62%,
+    rgba(255, 255, 255, 1)
+  );
+
+  transition: --a 1.5s cubic-bezier(.075,.82,.165,1);
+}
+
+.dark .button::before{
+  background: linear-gradient(
+    var(--a),
+    rgba(255, 255, 255, .76),
+    rgba(255, 255, 255, .13) 27%,
+    rgba(255, 255, 255, 0.05) 51%,
+    rgba(255, 255, 255, 0.05) 62%,
+    rgba(255, 255, 255, .35)
+  );
+}
+
+.button:hover { transform: scale(1.03); }
+.button:hover::before { --a: calc(148deg + 180deg); } 
+
+.button:active {
+  transform: scale(0.98) translateY(1px);
+}
+
+.button:active::before {
+  --a: calc(148deg + 90deg);
+}
+
+.button[data-pressed="true"] {
+  transform: scale(0.98) translateY(1px);
+}
+.button[data-pressed="true"]::before {
+  --a: calc(148deg + 90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::before {
+    transition: none;
+  }
+}
