@@ -175,14 +175,14 @@ export default function About() {
                       <img
                         src={exp.logoSrc}
                         alt="company logo"
-                        className={`hidden lg:block lg:opacity-0 lg:group-hover:opacity-100
+                        className={`hidden lg:block lg:opacity-0 lg:group-hover:opacity-100 lg:scale-50 lg:group-hover:scale-100
               lg:transition-all lg:duration-300 lg:delay-100
               lg:absolute lg:right-0 lg:top-[20%] lg:-translate-y-1/2
               h-auto pointer-events-none ${exp.logoClass}`}
                       />
                     </span>
                     <span
-                      className={`inline-block transform-gpu will-change-transform transition-all ease duration-300 ${exp.companyClass}`}
+                      className={`inline-block transform-gpu will-change-transform transition-all ease duration-300 delay-150 group-hover:delay-0 ${exp.companyClass}`}
                     >
                       {exp.company}
                     </span>
