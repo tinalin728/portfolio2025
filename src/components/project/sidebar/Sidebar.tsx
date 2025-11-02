@@ -13,14 +13,8 @@ type Props = {
   accent?: string;
 };
 
-export default function Sidebar({
-  sections,
-  globe,
-  mobileTitle,
-  accent,
-}: Props) {
+export default function Sidebar({ sections, globe, mobileTitle }: Props) {
   const activeId = useActiveSection(sections, 180);
-  const TAIL = "#444444";
 
   return (
     <div className="w-full flex justify-center sticky top-3 z-[100]">
@@ -38,7 +32,7 @@ export default function Sidebar({
             <House className="w-[20px] h-[20px] text-greyscale-400 dark:text-white-100" />
             <Tooltip
               id="tip-home"
-              label="Home"
+              label="Return to Work"
               bubbleClassName="-bottom-[70%] left-[22px] translate-y-1 -translate-x-1/2"
               caretClassName="left-[52%] -top-[2px] -translate-y-1/2"
             />

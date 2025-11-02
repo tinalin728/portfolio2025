@@ -95,7 +95,7 @@ export default function Solar() {
                       {f.title}
                     </h3>
                     <p className="mb-4">{f.description}</p>
-                    <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark p-2 rounded-xl">
+                    <div className="border dark:border-black bg-light-400/50 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 rounded-xl">
                       <video
                         src={f.src}
                         autoPlay

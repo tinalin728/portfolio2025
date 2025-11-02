@@ -9,7 +9,6 @@ type Props = {
   className?: string;
   target?: "_blank" | "_self";
   rel?: string;
-  theme?: "dark" | "light";
 };
 
 export function PrimaryButton({
@@ -19,7 +18,6 @@ export function PrimaryButton({
   className = "",
   target,
   rel,
-  theme,
 }: Props) {
   const base = `button rounded-full ${className}`;
 

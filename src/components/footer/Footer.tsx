@@ -1,5 +1,5 @@
 import { ContactCopy } from "./ContactCopy";
-import { MousePointer2, Smile } from "lucide-react";
+import { MousePointer2, Smile, MoveRight } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="h-[62vh] relative pt-10
+      className="h-[62vh] relative lg:pt-10
         before:content-[''] before:absolute
         before:top-3 before:left-1/2 before:-translate-x-1/2 before:w-full before:h-full
         before:pointer-events-none
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <ContactCopy />
         <motion.div
-          className="absolute -translate-y-1/2 bottom-[22%] lg:-translate-x-1/2 lg:bottom-[30%] lg:right-[37%] pointer-events-none flex gap-1 flex-col items-center justify-center"
+          className="absolute -translate-y-1/2 bottom-[26%] lg:-translate-x-1/2 lg:bottom-[30%] lg:right-[37%] pointer-events-none flex gap-1 flex-col items-center justify-center"
           initial={{ x: 0, y: 0, rotate: 0 }}
           animate={animate}
           transition={{
@@ -49,25 +49,61 @@ export default function Footer() {
           }}
           aria-hidden="true"
         >
-          <MousePointer2 className="w-5 h-5 text-greyscale-300 rotate-[45deg] lg:rotate-[9deg] block" />
+          <MousePointer2
+            strokeWidth="1.5"
+            className="w-5 h-5 text-greyscale-300 rotate-[45deg] lg:rotate-[9deg] block"
+          />
           <span className="text-[12.5px] uppercase tracking-[1px] block  text-greyscale-300">
             {" "}
             tap to copy
           </span>
         </motion.div>
       </div>
-      <div className="border-t py-3">
-        <div className="max-container flex flex-col-reverse justify-between gap-4 items-center relative lg:flex-row">
-          <span className="small">
-            Built with React | TypeScript | TailwindCSS
-          </span>
-          <span className="small block lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
+      <div className="border-t py-4 md:py-2">
+        <div className="max-container flex flex-col-reverse justify-between gap-2 items-center relative lg:flex-row dark:text-greyscale-300 text-greyscale-400 text-center text-[12.5px] tracking-[1px] uppercase">
+          <span className="">Built with React, TypeScript, TailwindCSS</span>
+          <span className=" block lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 uppercase ">
             ©2025 Tina Lin.
           </span>
 
-          <div className="flex gap-10">
-            <span className="small">Linkedin </span>
-            <span className="small">Github </span>
+          <div className="flex gap-4">
+            <a
+              href="/assets/resume.pdf"
+              aria-label="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-greyscale-300 group hover:gap-[5px] hover:text-dark-700 dark:hover:text-white-100 transition-all duration-300 ease-out"
+            >
+              [
+              <span className="text-[12.5px] tracking-[1px] uppercase">
+                Resume
+              </span>
+              <MoveRight className="w-3 group-hover:rotate-[-15deg]" />]
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/tina-lin-000613b5/"
+              className="flex items-center gap-1 text-greyscale-300 group hover:gap-[5px] hover:text-dark-700 dark:hover:text-white-100 transition-all duration-300 ease-out"
+            >
+              [
+              <span className="text-[12.5px] tracking-[1px] uppercase">
+                Linkedin
+              </span>
+              <MoveRight className="w-3 group-hover:rotate-[-15deg]" />]
+            </a>
+            <a
+              href="https://github.com/tinalin728"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-greyscale-300 group hover:gap-[5px] hover:text-dark-700 dark:hover:text-white-100 transition-all duration-300 ease-out"
+            >
+              [
+              <span className="text-[12.5px] tracking-[1px] uppercase">
+                Github
+              </span>
+              <MoveRight className="w-3 group-hover:rotate-[-15deg]" />]
+            </a>
           </div>
         </div>
       </div>

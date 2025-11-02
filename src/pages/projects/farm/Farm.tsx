@@ -20,6 +20,7 @@ import schoolafter from "../../../../public/assets/farm/school-after.png";
 import schoolbefore from "../../../../public/assets/farm/school-before.png";
 import form from "../../../../public/assets/farm/form.png";
 import sitemap from "../../../../public/assets/farm/sitemap.png";
+import sitemapbefore from "../../../../public/assets/farm/before-sitemap.png";
 import newpages from "../../../../public/assets/farm/newpages.png";
 import needs from "../../../../public/assets/farm/needs.png";
 
@@ -107,7 +108,7 @@ export default function Farm() {
                 Visitors now spend more time on pages, explore more sections per
                 visit, and interact with content more often. The results below
                 compare the two months after launch with the two months before
-                launch from Google Analytics.
+                launch in Google Analytics.
               </p>
               <p className="mt-10 mb-4 small-tagline mx-auto">
                 Data as of Oct. 29, 2026
@@ -119,8 +120,8 @@ export default function Farm() {
                     tabIndex={0}
                     className="group relative overflow-visible         
                  flex flex-col justify-center items-center cursor-pointer
-                 p-6 lg::p-10 rounded-xl bg-light-300/50 dark:bg-dark-600
-                 shadow-block border text-center dark:shadow-blockDark min-h-[150px]"
+                 p-6 lg::p-10 rounded-xl border dark:border-black bg-light-300/80 dark:bg-dark-700/50
+                 shadow-block  text-center dark:shadow-blockDark min-h-[150px]"
                     aria-describedby={`impact-${m.id}`}
                   >
                     <div className="flex gap-2">
@@ -142,11 +143,11 @@ export default function Farm() {
 
             <div className="mb-14 md:mb-20">
               <p className="tagline mb-4">The challenge</p>
-              <h3 className="mb-2">Restructuring for growth</h3>
+              <h3 className="mb-2">Content and navigation overhaul</h3>
               <p>
                 The site lacked clear structure and consistency, with scattered,
                 redundant content that was hard to scan. As programs expanded
-                and produce donations grew, the farm needed a modern, scalable
+                and community impact grew, the farm needed a modern, scalable
                 website that serves multiple audiences.
               </p>
             </div>
@@ -164,7 +165,7 @@ export default function Farm() {
                   <p className="mb-4">{f.description}</p>
                 </div>
 
-                <div className="border rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark overflow-hidden">
+                <div className="border dark:border-black rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark overflow-hidden">
                   <img
                     src={f.images.src}
                     alt={f.images.alt}
@@ -183,21 +184,20 @@ export default function Farm() {
                 The redesign began with weekly discussions with the Executive
                 Director and the Educational Leader, understanding what their
                 needs were and discussing major issues with the existing issues.
-                Besides updating content about new programs, the ultimate main
-                goal was to attract more visitors to the farm, especially
-                schools.
+                Besides updating new content, the ultimate main goal was to
+                attract more visitors to the farm, especially schools.
               </p>
 
               <div className="grid gap-4 md:grid-cols-2 md:gap-8">
                 {p.problems.map((p, i) => (
                   <div
                     key={i}
-                    className="p-6 border rounded-xl flex flex-col items-start justify-start bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark"
+                    className="p-6 border dark:border-black rounded-xl flex flex-col items-start justify-start bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark"
                   >
                     <div className="flex items-center justify-between gap-2 w-full pb-4">
                       <h4 className="">{p.title}</h4>
 
-                      <div className="p-2 border rounded-md bg-light-100/50 dark:bg-dark-300/50 w-fit">
+                      <div className="p-2 border dark:border-black rounded-md bg-light-200/50 dark:bg-dark-600 w-fit shadow-block dark:shadow-blockDark">
                         <img
                           src={p.image.src}
                           alt={p.image.alt}
@@ -218,7 +218,7 @@ export default function Farm() {
                 Lead, and feedback from parents/teachers, I identified three
                 core expectations for the website.
               </p>
-              <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark p-4 md:p-10 rounded-xl">
+              <div className="border dark:dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-4 md:p-10 rounded-xl">
                 <img
                   src={needs}
                   alt="user needs"
@@ -227,9 +227,9 @@ export default function Farm() {
               </div>
             </div>
             <div className="mb-14 md:mb-20">
-              <p className="tagline mb-4">Project Direction</p>
-              <h3 className="mb-2">Design priorities</h3>
-              <p className="mb-4 md:mb-10">
+              <p className="tagline mb-4">redesign goals</p>
+              <h3 className="mb-2">Project Direction</h3>
+              <p className="mb-4">
                 As the farm shifts to increasing school field trips, the
                 redesign{" "}
                 <span className="text-dark-700 dark:text-white-100 italic">
@@ -239,28 +239,29 @@ export default function Farm() {
                 purpose, making field trip details easy to understand while
                 keeping visitor info accessible.
               </p>
-              <ul className="space-y-6 list-decimal ml-6">
+              <ol className="space-y-6 list-decimal ml-6 marker:text-dark-700 dark:marker:text-white-100 marker:font-normal">
                 <li>
-                  <p className="font-medium dark:text-white-100">
-                    Focus on education
+                  <p className="font-normal text-dark-700 dark:text-white-100">
+                    Make <span className="italic">Education</span> stand out
                   </p>
                   <ul className="mt-1 space-y-1 text-sm list-disc">
                     <li>
-                      Clear field trip info: What students learn on the farm and
-                      why it matters, how to request a booking, what to expect
-                      on the day
+                      Give Education its own tab, differentiating it from
+                      general info
+                    </li>
+                    <li>
+                      Clear field trip info, what students learn, how to request
+                      a booking, what to expect
                     </li>
                     <li>
                       How we are different from other farms and how we support
-                      learning: Teacher resources to extend learning back in the
-                      classroom
+                      learning
                     </li>
-                    <li>Clear connection to class outcomes</li>
                   </ul>
                 </li>
 
                 <li>
-                  <p className="font-medium  dark:text-white-100">
+                  <p className="font-normal text-dark-700 dark:text-white-100">
                     Solutions for controlled booking{" "}
                   </p>
                   <ul className="mt-1 space-y-1 text-sm list-disc">
@@ -268,17 +269,25 @@ export default function Farm() {
                   </ul>
                 </li>
                 <li>
-                  <p className="font-medium  dark:text-white-100">
+                  <p className="font-normal text-dark-700 dark:text-white-100">
                     Keep visitor info clear and secondary
                   </p>
                   <ul className="mt-1 space-y-1 text-sm list-disc">
-                    <li>What is on the farm, including events and programs</li>
                     <li>
-                      How to participate without pulling focus from education
+                      Showcase the farm itself, animals, gardens, and learning
+                      stations, this stays accurate year round.
+                    </li>
+                    <li>
+                      List confirmed activities on the Events page, add seasonal
+                      events as they are scheduled.{" "}
+                    </li>
+                    <li>
+                      Avoid static program pages until programs are finalized,
+                      link from Events to details when ready.
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ol>
             </div>
           </SectionLayout>
           <hr className="divider" />
@@ -299,8 +308,23 @@ export default function Farm() {
                 , creating a structure that clearly reflects the farm’s programs
                 and community focus.
               </p>
-              <div className="border rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark overflow-hidden p-4 md:p-10">
-                <img src={sitemap} alt="style guide" className="rounded-lg" />
+              <div className="border dark:dark:border-black rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark overflow-hidden p-4 md:p-10">
+                <Tabs
+                  labels={["Before", "Improved"]}
+                  contents={[
+                    <img
+                      src={sitemapbefore}
+                      alt="sitemap before"
+                      className="rounded-xl overflow-hidden max-w-[82%] mx-auto"
+                    />,
+                    <img
+                      src={sitemap}
+                      alt="sitemap after"
+                      className="rounded-xl overflow-hidden"
+                    />,
+                  ]}
+                  defaultIndex={1}
+                />
               </div>
             </div>
             <div className="mb-14 md:mb-20">
@@ -315,7 +339,7 @@ export default function Farm() {
               </p>
               <div
                 ref={wrapRef}
-                className="border rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark overflow-hidden p-4 md:p-10"
+                className="border dark:dark:border-black rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark overflow-hidden p-4 md:p-10"
               >
                 <div className="grid grid-cols-2 justify-items-center place-items-center w-fit mx-auto">
                   {p.palette.map((s, i) => (
@@ -349,7 +373,7 @@ export default function Farm() {
                 across pages, professional, and calming.
               </p>
 
-              <div className="border px-4 pt-4 md:px-10 md:py-10 rounded-xl max-h-[800px] md:max-h-[720px] overflow-hidden relative mb-4 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+              <div className="border dark:dark:border-black px-4 pt-4 md:px-10 md:py-10 rounded-xl max-h-[800px] md:max-h-[720px] overflow-hidden relative mb-4 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark">
                 <Tabs
                   labels={["Before", "Improved"]}
                   contents={[
@@ -362,7 +386,7 @@ export default function Farm() {
                   homepage
                 </p>
               </div>
-              <div className="border p-4 md:p-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+              <div className="border dark:dark:border-black p-4 md:p-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark">
                 <p className="small-tagline mb-4">video preview integration</p>
                 <div className="relative">
                   <video
@@ -386,7 +410,7 @@ export default function Farm() {
                 </div>
               </div>
 
-              <div className="border p-4 md:p-10 rounded-xl max-h-[800px] md:max-h-[720px] overflow-hidden relative mb-4 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+              <div className="border dark:dark:border-black p-4 md:p-10 rounded-xl max-h-[800px] md:max-h-[720px] overflow-hidden relative mb-4 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark">
                 <Tabs
                   labels={["Before", "Improved"]}
                   contents={[
@@ -400,7 +424,7 @@ export default function Farm() {
                 </p>
               </div>
 
-              <div className="border pt-4 px-4 md:pt-10 md:px-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+              <div className="border dark:dark:border-black pt-4 px-4 md:pt-10 md:px-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark">
                 <p className="small-tagline mb-4">
                   Form design for controlled booking
                 </p>
@@ -408,7 +432,7 @@ export default function Farm() {
                   <img src={form} alt="form design" className="" />
                 </div>
               </div>
-              <div className="border pt-4 px-4 md:pt-10 md:px-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+              <div className="border dark:dark:border-black pt-4 px-4 md:pt-10 md:px-10 rounded-xl overflow-hidden relative mb-4 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:!shadow-blockDark">
                 <p className="ml-6 small-tagline mb-4">updated content</p>
                 <div className="relative">
                   <img src={newpages} alt="form design" />

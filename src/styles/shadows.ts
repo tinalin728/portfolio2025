@@ -6,7 +6,7 @@ export const shadows = {
     "0px 1px 2px 0 rgba(255, 255, 255, 0.80), 0px -1px 2px 0 rgba(255, 255, 255, 0.80)",
 
   blockDark:
-    "inset 4px 4px 4px 0 rgba(0, 0, 0, 0.15), 1px 1px 4px 0 rgba(30, 30, 30, 0.25)",
+    "-0px -1px 2px 0 rgba(139, 139, 139, 0.25), 0px 1px 2px 0 rgba(139, 139, 139, 0.25)",
 
   button:
     "2px -2px 5px 0 rgba(255, 255, 255, 0.15) inset, -1px 1px 4px 0 rgba(255, 255, 255, 0.15) inset",

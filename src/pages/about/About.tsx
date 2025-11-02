@@ -70,7 +70,7 @@ export default function About() {
             <div className="pt-20">
               <p className="tagline mb-4">My Tool Stack</p>
 
-              <div className="flex gap-6 flex-wrap border rounded-xl bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark p-6 backdrop-blur-[5px]">
+              <div className="flex gap-6 flex-wrap border dark:border-black rounded-xl bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark p-6 backdrop-blur-[5px]">
                 {TOOLS.map((tool, i) => (
                   <div
                     key={tool.alt ?? i}
@@ -149,12 +149,13 @@ export default function About() {
       <section className="pb-[6rem] md:pb-[8rem] relative z-10 bg-light-300 dark:bg-dark-700 border-b">
         <div className="max-container">
           <p className="tagline mb-4">My path</p>
-          <div className="px-6 md:px-20 pt-10 bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark border rounded-xl">
+          <div className="px-6 md:px-20 pt-10 bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark border rounded-xl dark:border-black ">
             <div className="pb-10 flex justify-between items-center border-b">
               <h3 className="tracking-[1px]">Experience</h3>
               <PrimaryButton
                 label="View Resume"
-                href="https://github.com/tinalin728/solar-journey/"
+                href="/assets/resume.pdf"
+                aria-label="Resume"
                 Icon={FolderDown}
                 className="w-fit"
                 target="_blank"
@@ -181,7 +182,7 @@ export default function About() {
                   </p>
                   <ul className="mt-2 text-left ml-4">
                     {exp.content.map((b, i) => (
-                      <li key={i} className="list-disc text-[15px]">
+                      <li key={i} className="list-disc text-[16px]">
                         {b}
                       </li>
                     ))}
