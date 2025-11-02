@@ -71,12 +71,12 @@ export default function ProjectCard({ project }: Props) {
           "
         >
           <div className="pr-1">
-            <h4 className="pb-1  max-w-[85%] md:max-w-full">{project.title}</h4>
+            <h4 className="pb-1">{project.title}</h4>
             <p className="w-full text-sm tracking-wide font-normal text-greyscale-300 xl:text-base 2xl:text-md">
               {project.category}
             </p>
           </div>
-          <div className="absolute top-4 right-2 md:relative md:top-0 md:right-0 h-fit w-fit shadow-dockbtnShadow dark:shadow-dockbtnShadowDark inline-flex justify-center items-center rounded-full dock-btn group-hover:scale-[1.10] transition-transform duration-300 ease-out transform-gpu [will-change:transform] group-hover:-rotate-[20deg]">
+          <div className="hidden md:block md:relative md:top-0 md:right-0 h-fit w-fit shadow-dockbtnShadow dark:shadow-dockbtnShadowDark rounded-full dock-btn group-hover:scale-[1.10] transition-transform duration-300 ease-out transform-gpu [will-change:transform] group-hover:-rotate-[20deg]">
             <SendHorizontal className="w-[16px] h-[16px] md:w-[17px] md:h-[17px]  text-greyscale-400 dark:text-white-100" />
           </div>
         </div>

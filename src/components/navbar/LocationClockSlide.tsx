@@ -111,7 +111,6 @@ export function LocationClockSlide({
 
     raf = window.setTimeout(tick, frameMs) as unknown as number;
     return () => window.clearTimeout(raf);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showTime]); // only when toggling modes
 
   if (!mounted) {
@@ -123,7 +122,7 @@ export function LocationClockSlide({
   }
 
   return (
-    <div className="uppercase tracking-[1px] text-[12.5px] leading-[1.2] text-right">
+    <div className="hidden md:block uppercase tracking-[1px] text-[12.5px] leading-[1.2] text-right">
       <span aria-live="polite">{display}</span>
     </div>
   );
