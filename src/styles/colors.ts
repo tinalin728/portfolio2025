@@ -31,7 +31,7 @@ export const colours = {
         100: "#E0E0E0",  // main text light
         200: "#B3B3B3",
         300: "#8A8A8A",  // middle gray
-        400: "#676767",
+        400: "#777777",
         500: "#2A2A2A",  // dark gray / sub black
     },
 

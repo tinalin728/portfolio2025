@@ -103,7 +103,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={slideUp} className="relative px-2">
-                <p className="display font-canela text-center mt-8 max-w-[800px] font-thin dark:text-greyscale-200 text-greyscale-300">
+                <p className="display font-canela text-center mt-8 max-w-[800px] font-thin">
                   Designing
                   <span className="font-canela dark:text-white-100 text-greyscale-500">
                     {" "}

@@ -27,7 +27,7 @@ export default function Sidebar({ sections, globe, mobileTitle }: Props) {
           <Link
             to="/"
             aria-describedby="tip-home"
-            className="!p-[.9rem] button rounded-full group bg-light-200 dark:bg-dark-500 group transition-all duration-300 hover:scale-[1.05] relative shadow-dockbtnShadow dark:shadow-dockbtnShadowDark"
+            className="!p-[.9rem] button rounded-full group bg-light-200 dark:bg-dark-600 group transition-all duration-300 hover:scale-[1.05] relative shadow-dockbtnShadow dark:shadow-dockbtnShadowDark"
           >
             <House className="w-[20px] h-[20px] text-greyscale-400 dark:text-white-100" />
             <Tooltip

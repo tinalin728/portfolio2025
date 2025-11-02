@@ -24,25 +24,19 @@ export default function ProjectIntro({
           </h1>
         </div>
         <div className="flex flex-col justify-center md:items-center md:py-4 gap-8 md:gap-[4rem] md:flex-row lg:gap-[8rem]">
-          <div className="border-l dark:border-white-40 pl-4">
-            <p className="uppercase tracking-[.8px] text-sm text-greyscale-300">
-              Tools
-            </p>
-            <p className="dark:text-white-100">{tools}</p>
+          <div className="border-l border-greyscale-200 dark:border-white-40 pl-4">
+            <p className="uppercase tracking-[.8px] text-sm">Tools</p>
+            <p className="text-dark-600 dark:text-white-100">{tools}</p>
           </div>
 
-          <div className="border-l dark:border-white-40 pl-4 ">
-            <p className="uppercase tracking-[.8px] text-sm text-greyscale-300">
-              Role
-            </p>
-            <p className="dark:text-white-100">{role}</p>
+          <div className="border-l border-greyscale-200 dark:border-white-40 pl-4 ">
+            <p className="uppercase tracking-[.8px] text-sm">Role</p>
+            <p className="text-dark-600 dark:text-white-100">{role}</p>
           </div>
 
-          <div className="border-l dark:border-white-40 pl-4 ">
-            <p className="uppercase tracking-[.8px] text-sm text-greyscale-300">
-              Timeline
-            </p>
-            <p className="dark:text-white-100">{timeline}</p>
+          <div className="border-l border-greyscale-200 dark:border-white-40 pl-4 ">
+            <p className="uppercase tracking-[.8px] text-sm">Timeline</p>
+            <p className="text-dark-600 dark:text-white-100">{timeline}</p>
           </div>
         </div>
       </div>
