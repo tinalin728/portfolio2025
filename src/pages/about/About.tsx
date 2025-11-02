@@ -149,7 +149,7 @@ export default function About() {
       <section className="pb-[6rem] md:pb-[8rem] relative z-10 bg-light-300 dark:bg-dark-700 border-b">
         <div className="max-container">
           <p className="tagline mb-4">My path</p>
-          <div className="px-6 md:px-20 pt-10 bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark border rounded-xl dark:border-black ">
+          <div className="px-6 md:px-12 lg:px-20 pt-10 bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark border rounded-xl dark:border-black ">
             <div className="pb-4 md:pb-10 flex flex-col gap-4 justify-between md:flex-row md:items-center border-b">
               <h3 className="tracking-[1px]">Experience</h3>
               <PrimaryButton
@@ -157,7 +157,7 @@ export default function About() {
                 href="/assets/resume.pdf"
                 aria-label="Resume"
                 Icon={FolderDown}
-                className="w-fit"
+                className="w-fit hidden md:block"
                 target="_blank"
                 rel="noopener noreferrer"
               />
@@ -166,31 +166,60 @@ export default function About() {
             {EXPERIENCES.map((exp, i) => (
               <div
                 key={i}
-                className="flex flex-col md:flex-row py-4 md:py-10 border-b last:border-0"
+                className="flex justify-between lg:gap-20 py-4 md:py-10 border-b last:border-0 group"
               >
-                <p className="basis-[20%] w-fit text-greyscale-300 mb-4 md:mb-0">
-                  {exp.time}
-                </p>
-
-                <div className="basis-[80%]">
-                  <p className="font-medium text-dark-700 dark:text-white-100 mb-1">
-                    {exp.company}
-                  </p>
-
-                  <p className="mb-2 text-[16px] text-greyscale-100 dark:text-light-200">
-                    {exp.role}
-                  </p>
+                <div className="w-full xl:basis-[80%]">
+                  <h5 className="flex gap-2 flex-col lg:flex-row">
+                    <span className="relative">
+                      {exp.role} at
+                      <img
+                        src={exp.logoSrc}
+                        alt="company logo"
+                        className={`hidden lg:block lg:opacity-0 lg:group-hover:opacity-100
+              lg:transition-all lg:duration-300 lg:delay-100
+              lg:absolute lg:right-0 lg:top-[20%] lg:-translate-y-1/2
+              h-auto pointer-events-none ${exp.logoClass}`}
+                      />
+                    </span>
+                    <span
+                      className={`inline-block transform-gpu will-change-transform transition-all ease duration-300 ${exp.companyClass}`}
+                    >
+                      {exp.company}
+                    </span>
+                  </h5>
+                  <span className="block italic mt-2 xl:hidden">
+                    {exp.time}
+                  </span>
                   <ul className="mt-2 text-left ml-4">
                     {exp.content.map((b, i) => (
-                      <li key={i} className="list-disc text-[16px]">
+                      <li key={i} className="list-disc">
                         {b}
                       </li>
                     ))}
                   </ul>
                 </div>
+
+                <h5
+                  className={` text-end hidden xl:block xl:basis-[20%]  ${
+                    i === 0
+                      ? "text-dark-700 dark:text-white-100"
+                      : "!text-greyscale-300"
+                  }`}
+                >
+                  {exp.time}{" "}
+                </h5>
               </div>
             ))}
           </div>
+          <PrimaryButton
+            label="View Resume"
+            href="/assets/resume.pdf"
+            aria-label="Resume"
+            Icon={FolderDown}
+            className="w-fit block md:hidden mt-8 mx-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </div>
       </section>
     </>

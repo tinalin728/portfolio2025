@@ -26,8 +26,7 @@
   h1,
   h2,
   h3,
-  h4,
-  h5 {
+  h4{
     @apply font-canela font-thin tracking-[.5px] text-dark-700 dark:text-white-100;
   }
 
@@ -48,12 +47,12 @@
     @apply leading-[1.28] text-[21px] md:text-[22px];
   }
   h5 {
-    @apply leading-[1.28] text-[18px] md:text-[20px];
+    @apply font-inter font-normal text-dark-700 dark:text-white-100 leading-[1.28] text-[18px] md:text-[22px];
   }
   li,
   p,
   .about {
-    @apply leading-[1.6] text-base md:text-[17.5px] tracking-[.1px] text-greyscale-400 dark:text-greyscale-200;
+    @apply leading-[1.6] text-base md:text-[17.8px] tracking-[0.2px] text-greyscale-400 dark:text-greyscale-300;
   }
 
   .small {
