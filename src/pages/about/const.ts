@@ -38,7 +38,7 @@ export const EXPERIENCES = [
     companyClass: "lg:group-hover:translate-x-[4.1rem]"
   },
   {
-    company: "Simuhealth",
+    company: "SimuHealth",
     role: "Web Development & QA Intern",
     time: "May - July 2025",
     logoSrc: "/assets/about/simu.svg",

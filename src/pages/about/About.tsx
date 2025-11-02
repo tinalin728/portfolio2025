@@ -200,7 +200,7 @@ export default function About() {
                 </div>
 
                 <h5
-                  className={` text-end hidden xl:block xl:basis-[20%]  ${
+                  className={`text-end hidden xl:block xl:basis-[20%]  ${
                     i === 0
                       ? "text-dark-700 dark:text-white-100"
                       : "!text-greyscale-300"
