@@ -9,7 +9,7 @@ export default function Dock() {
     <div
       ref={ref}
       data-vars
-      className="dock relative inline-flex items-center gap-3 py-2 px-2 w-fit mx-auto cursor-pointer overflow-visible rounded-full ring-gradient transition-[padding] duration-300 ease-out hover:pl-4 hover:pr-4 has-[.dock-btn:hover]:pl-4 has-[.dock-btn:hover]:pr-4 focus-within:pl-5 focus-within:pr-5 dark:after:content-[''] dark:after:absolute dark:after:left-1/2 dark:after:bottom-0 dark:after:h-px dark:after:w-[120px] dark:after:-translate-x-1/2 dark:after:rounded-full dark:after:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent)] "
+      className="dock relative inline-flex items-center gap-3 py-2 px-2 w-fit mx-auto cursor-pointer overflow-visible rounded-full ring-gradient transition-[padding] duration-300 ease-out lg:hover:pl-4 lg:hover:pr-4 has-[.dock-btn:hover]:pl-4 has-[.dock-btn:hover]:pr-4 focus-within:pl-5 focus-within:pr-5 dark:after:content-[''] dark:after:absolute dark:after:left-1/2 dark:after:bottom-0 dark:after:h-px dark:after:w-[120px] dark:after:-translate-x-1/2 dark:after:rounded-full dark:after:bg-[linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent)] "
     >
       <a
         href="https://www.linkedin.com/in/tina-lin-000613b5/"

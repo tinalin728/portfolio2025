@@ -56,7 +56,7 @@ export default function ProjectWrapper({
             </div>
 
             {nextTwo.length >= 2 && (
-              <div className="grid md:grid-cols-2 gap-6 pb-12 md:pb-20 px-20">
+              <div className="grid md:grid-cols-2 gap-6 pb-12 md:pb-20 px-10 lg:px-14">
                 {nextTwo.slice(0, 2).map((p) => (
                   <ProjectCard key={p.id} project={p} />
                 ))}

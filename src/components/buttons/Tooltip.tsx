@@ -15,7 +15,7 @@ export const Tooltip: FC<TooltipProps> = ({
   caretClassName,
 }) => (
   <div
-    className={`absolute ${
+    className={`absolute hidden lg:inline-block ${
       bubbleClassName ?? "left-1/2 -top-[2.4rem] translate-y-1 -translate-x-1/2"
     }`}
   >
