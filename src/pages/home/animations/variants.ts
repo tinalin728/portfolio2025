@@ -1,5 +1,5 @@
 // src/animations/variants.ts
-import type { Variants, Transition } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 /** Simple fade in */
 export const fadeIn: Variants = {

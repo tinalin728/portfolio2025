@@ -1,9 +1,6 @@
 import { Linkedin, Github, Mail, FolderDown } from "lucide-react";
 import { useDockWave } from "./useDockWave";
 import { Tooltip } from "../../components/buttons/Tooltip";
-import { Link } from "react-router-dom";
-
-type DockProps = React.HTMLAttributes<HTMLDivElement>;
 
 export default function Dock() {
   const ref = useDockWave({ radius: 120, buttonSelector: ".dock-btn" });

@@ -73,7 +73,6 @@ export function LocationClockSlide({
 
     // pad to same length
     const maxLen = Math.max(from.length, to.length);
-    const fromPadded = from.padEnd(maxLen, " ");
     const toPadded = to.padEnd(maxLen, " ");
 
     // slower, smoother scramble
