@@ -47,7 +47,7 @@ export default function About() {
 
             <p className="mb-5 fade-item"></p>
 
-            <h1 className="about font-inter font-light mb-4">
+            <h1 className="about font-inter font-normal mb-4">
               I’m Tina, a Vancouver-based UX/UI and web designer who enjoys
               coding.
             </h1>
