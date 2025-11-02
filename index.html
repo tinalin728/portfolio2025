@@ -10,13 +10,15 @@
     (function () {
       var k = "theme";
       var s = localStorage.getItem(k);
-      var t = s === "light" || s === "dark"
-        ? s
-        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.classList.toggle("dark", t === "dark");
-      document.documentElement.style.colorScheme = t === "dark" ? "dark" : "light";
+      var t = s === "light" || s === "dark" ? s : "dark";
+      if (!s) localStorage.setItem(k, t);
+
+      var root = document.documentElement;
+      root.classList.toggle("dark", t === "dark");
+      root.style.colorScheme = t === "dark" ? "dark" : "light";
     })();
   </script>
+
 
 </head>
 
