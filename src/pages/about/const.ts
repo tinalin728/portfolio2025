@@ -34,8 +34,8 @@ export const EXPERIENCES = [
       "Managing end-to-end digital experience across web, social, and email.",
       "Led a customized WordPress redesign and rebuilt the information architecture across 10 plus pages, increasing average engagement time by 86%, views per user by 89.12% and events per user by 81.62%.",
     ],
-    logoClass: "w-[55px] lg:translate-x-[3.2rem] lg:group-hover:translate-x-[4rem]",
-    companyClass: "lg:group-hover:translate-x-16"
+    logoClass: "w-[59px] lg:translate-x-[3.4rem] lg:group-hover:translate-x-[4.2rem]",
+    companyClass: "lg:group-hover:translate-x-[4.1rem]"
   },
   {
     company: "Simuhealth",
@@ -47,8 +47,8 @@ export const EXPERIENCES = [
       "Ran QA with TypeScript and Remix, fixed styling and functional issues, raised accessibility quality.",
       "Supported designers with consistent components, UX research, and early product ideation."
     ],
-     logoClass: "w-12 lg:translate-x-[3rem] lg:group-hover:translate-x-[3.8rem]",
-     companyClass: "lg:group-hover:translate-x-16"
+     logoClass: "w-12 lg:translate-x-[3rem] lg:group-hover:translate-x-[3.5rem]",
+     companyClass: "lg:group-hover:translate-x-14"
   },
   {
     company: "Convergence & Pixel Ramen",
@@ -59,8 +59,8 @@ export const EXPERIENCES = [
     content: [
       "Created on brand social graphic assets and videos using Illustrator, Photoshop, and After Effects.",
     ],
-    logoClass: "w-20 lg:translate-x-[5.2rem] lg:group-hover:translate-x-[6rem]",
-    companyClass: "lg:group-hover:translate-x-[6rem]"
+    logoClass: "w-20 lg:translate-x-[5.2rem] lg:group-hover:translate-x-[5.5rem]",
+    companyClass: "lg:group-hover:translate-x-[5.5rem]"
   },
 ] as const
 
