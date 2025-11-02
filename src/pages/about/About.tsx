@@ -70,7 +70,7 @@ export default function About() {
             <div className="pt-20">
               <p className="tagline mb-4">My Tool Stack</p>
 
-              <div className="flex gap-6 flex-wrap border dark:border-black rounded-xl bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark p-6 backdrop-blur-[5px]">
+              <div className="flex gap-4 md:gap-6 flex-wrap border dark:border-black rounded-xl bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark p-4 md:p-6 backdrop-blur-[5px]">
                 {TOOLS.map((tool, i) => (
                   <div
                     key={tool.alt ?? i}
@@ -150,7 +150,7 @@ export default function About() {
         <div className="max-container">
           <p className="tagline mb-4">My path</p>
           <div className="px-6 md:px-20 pt-10 bg-light-200/80 dark:bg-dark-600/50 shadow-block dark:shadow-blockDark border rounded-xl dark:border-black ">
-            <div className="pb-10 flex justify-between items-center border-b">
+            <div className="pb-4 md:pb-10 flex flex-col gap-4 justify-between md:flex-row md:items-center border-b">
               <h3 className="tracking-[1px]">Experience</h3>
               <PrimaryButton
                 label="View Resume"
@@ -168,7 +168,7 @@ export default function About() {
                 key={i}
                 className="flex flex-col md:flex-row py-4 md:py-10 border-b last:border-0"
               >
-                <p className="basis-[20%] w-fit text-greyscale-300">
+                <p className="basis-[20%] w-fit text-greyscale-300 mb-4 md:mb-0">
                   {exp.time}
                 </p>
 
@@ -177,7 +177,7 @@ export default function About() {
                     {exp.company}
                   </p>
 
-                  <p className="mb-2 text-[16px] text-greyscale-500 dark:text-light-200">
+                  <p className="mb-2 text-[16px] text-greyscale-100 dark:text-light-200">
                     {exp.role}
                   </p>
                   <ul className="mt-2 text-left ml-4">

@@ -25,13 +25,14 @@ export const ABOUT_META = {
 export const EXPERIENCES = [
   {
     company: "Stable Harvest Farm",
-    role: "Designer & Web Developer",
+    role: "Multimedia Web Designer & Developer",
     time: "July 2025 - Present",
     logoSrc: "/assets/about/iceland.png",
     alt: "Stable Harvest Farm logo",
     content: [
       "Defined a cohesive design system, colors, typography, and components, to improve consistency across the site.",
-      "Led a customized WordPress redesign and rebuilt the information architecture across 10+ pages.",
+      "Led a customized WordPress redesign and rebuilt the information architecture across 10 plus pages, increasing average engagement time by 86%, views per user by 89.12% and events per user by 81.62%.",
+      "Led social media and newsletter publishing."
     ],
   },
   {
