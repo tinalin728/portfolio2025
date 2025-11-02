@@ -2,7 +2,6 @@ import { useEffect, useMemo } from "react";
 import ProjectCard from "../project-cards/ProjectCard";
 import type { ReactNode } from "react";
 import type { ProjectCard as ProjectCardType } from "../../pages/projects/types";
-import { getNextTwo } from "../../pages/projects/utils";
 
 type Props = {
   children: ReactNode;
@@ -43,7 +42,7 @@ export default function ProjectWrapper({
       <div
         className={`max-w-[78rem] mx-auto ${className} bg-light-300 dark:bg-dark-700`}
       >
-        <div className=" dark:bg-dark-600/50 bg-light-200/80 md:px-6 lg:px-0">
+        <div className=" dark:bg-dark-600/80 bg-light-200/80 md:px-6 lg:px-0">
           <div className="border-x">
             {children}
             <hr className="divider" />
@@ -51,7 +50,7 @@ export default function ProjectWrapper({
             <div className="text-container flex justify-center items-center gap-4 md:gap-8 pb-10 md:pb-20">
               <hr className="w-full dark:bg-white-40" />
               <h2 className="tracking-[1px] text-greyscale-400 dark:text-greyscale-200 text-nowrap">
-                View more projects{" "}
+                View more work{" "}
               </h2>
               <hr className="w-full dark:bg-white-40" />
             </div>

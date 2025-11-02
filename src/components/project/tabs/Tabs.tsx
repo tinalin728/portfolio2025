@@ -25,7 +25,7 @@ export function Tabs({ labels, contents, defaultIndex = 0 }: TabsProps) {
       <div
         role="tablist"
         aria-label="Tabs"
-        className="flex p-[6px] w-fit mx-auto rounded-full ring-gradient dark:bg-dark-700/50"
+        className="flex p-[4px] w-fit mx-auto rounded-full border dark:border-black relative shadow-block dark:shadow-blockDark bg-light-200/80 dark:bg-dark-600"
       >
         {labels.map((label, i) => (
           <button

@@ -79,7 +79,7 @@ export default function Tims() {
                     </h3>
                     <p className="mb-4">{s.block.description}</p>
 
-                    <div className="border p-4 md:p-8 rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block dark:!shadow-blockDark">
+                    <div className="border dark:border-black p-4 md:p-8 rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark">
                       <div className="max-w-[90%] md:max-w-[70%] mx-auto flex gap-10">
                         <div className="flex gap-4">
                           {s.block.images?.map((m, i) => (
@@ -138,12 +138,12 @@ export default function Tims() {
                   {p.research.survey.map((q, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-3 md:gap-4 border p-2 rounded-lg bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark"
+                      className="flex items-center gap-3 md:gap-4 border dark:border-black p-2 rounded-lg bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark"
                     >
                       <img
                         src={q.image.src}
                         alt={q.image.alt}
-                        className="p-1 border rounded-lg dark:bg-dark-200"
+                        className="p-[6px] border dark:border-black rounded-lg dark:bg-dark-400 shadow-block dark:shadow-blockDark"
                       />
                       <span className="italic leading-[1.3] text-[15px] md:text-base">
                         {q.quote}
@@ -173,7 +173,7 @@ export default function Tims() {
                       }`}
                     >
                       <div className="p-4 md:p-8">
-                        <div className="p-2 border rounded-md bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark w-fit mb-2">
+                        <div className="p-2 border dark:border-black rounded-md bg-light-300/80 dark:bg-dark-600  w-fit mb-2 shadow-block dark:shadow-blockDark">
                           <img
                             src={b.icon.src}
                             alt={b.icon.alt}
@@ -188,7 +188,7 @@ export default function Tims() {
                         />
                       </div>
 
-                      <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
+                      <div className="border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
                         <div
                           className={`mx-auto flex gap-2 md:gap-4 ${
                             isLast
@@ -244,7 +244,7 @@ export default function Tims() {
                 focused on simplicity and ease.
               </p>
 
-              <div className="my-10 border bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
+              <div className="my-10 border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
                 <span className="block small-tagline mb-2 md:mb-4">
                   competitor analysis
                 </span>
@@ -254,7 +254,7 @@ export default function Tims() {
                   alt={TIMS_DETAIL.design.competitor.alt}
                 />
               </div>
-              <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
+              <div className="border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl">
                 <span className="block small-tagline mb-2 md:mb-4">
                   User Journey Map
                 </span>
@@ -291,7 +291,7 @@ export default function Tims() {
                 return (
                   <div
                     key={i}
-                    className="border mb-5 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl"
+                    className="border dark:border-black mb-5 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl"
                   >
                     <span className="block small-tagline mb-2 md:mb-4">
                       {f.label}
@@ -326,7 +326,7 @@ export default function Tims() {
                 return (
                   <div
                     key={i}
-                    className="border mb-5 md:mb-10 bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl"
+                    className="border dark:border-black mb-5 md:mb-10 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-2 md:p-8 rounded-xl"
                   >
                     <span className="block small-tagline mb-2 md:mb-4">
                       {f.label}
@@ -363,29 +363,41 @@ export default function Tims() {
                   make their selections confidently.
                 </p>
                 <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark border text-center">
-                    <h4 className="text-green-600"> 75% </h4>
+                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block border dark:border-black text-center dark:shadow-blockDark">
+                    <h4 className="font-inter font-normal !text-green-600">
+                      {" "}
+                      75%{" "}
+                    </h4>
                     <p className="text-sm mt-3 leading-[1.2]">
                       {" "}
                       Found process smoother
                     </p>
                   </div>
-                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block border text-center dark:shadow-blockDark">
-                    <h4 className="text-red-600"> 25% </h4>
+                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block border  dark:border-black text-center dark:shadow-blockDark">
+                    <h4 className="font-inter font-normal !text-red-600">
+                      {" "}
+                      25%{" "}
+                    </h4>
                     <p className="text-sm mt-3 leading-[1.2]">
                       {" "}
                       Found offer details unclear
                     </p>
                   </div>
-                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block  border text-center dark:shadow-blockDark">
-                    <h4 className="text-red-600"> 25% </h4>
+                  <div className="flex flex-col justify-center items-center p-6 md:p-10  rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block border  dark:border-black text-center dark:shadow-blockDark">
+                    <h4 className="font-inter font-normal !text-red-600">
+                      {" "}
+                      25%{" "}
+                    </h4>
                     <p className="text-sm mt-3  leading-[1.2]">
                       {" "}
                       Felt lost after adding items
                     </p>
                   </div>
-                  <div className="flex flex-col justify-center items-center p-6 md:p-10 rounded-xl bg-light-300/50 dark:bg-dark-600 shadow-block border text-center dark:shadow-blockDark">
-                    <h4 className="text-red-600"> 50% </h4>
+                  <div className="flex flex-col justify-center items-center p-6 md:p-10 rounded-xl bg-light-300/80 dark:bg-dark-700/50 shadow-block border  dark:border-black text-center dark:shadow-blockDark">
+                    <h4 className="font-inter font-normal !text-red-600">
+                      {" "}
+                      50%{" "}
+                    </h4>
                     <p className="text-sm mt-3 leading-[1.2]">
                       {" "}
                       Needed quick offer reference
@@ -419,7 +431,7 @@ export default function Tims() {
                       </li>
                     </ul>
                   </div>
-                  <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-4 md:p-[5rem] rounded-xl">
+                  <div className="border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-4 md:p-[5rem] rounded-xl">
                     <img
                       src={p.iteration.before.src}
                       alt={p.iteration.before.alt}
@@ -441,7 +453,7 @@ export default function Tims() {
                       <li>Improved visual hierarchy for menu screen</li>
                     </ul>
                   </div>
-                  <div className="border bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark p-4 md:p-[5rem] rounded-xl">
+                  <div className="border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark p-4 md:p-[5rem] rounded-xl">
                     <img
                       src={p.iteration.after.src}
                       alt={p.iteration.after.alt}
@@ -455,7 +467,7 @@ export default function Tims() {
             <div id="prototype" className="section-gap">
               <p className="tagline mb-4">Final prototype</p>
               <h3 className="mb-2">Try it yourself!</h3>
-              <div className="rounded-xl overflow-hidden border p-2 bg-light-300/50 dark:bg-dark-600 shadow-block dark:shadow-blockDark">
+              <div className="rounded-xl overflow-hidden border dark:border-black p-2 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark">
                 <iframe
                   src="https://embed.figma.com/proto/b1qsKrJYgq3JSl2vzSoljY/UIUX-Tim-hortons?page-id=128%3A756&node-id=1256-6914&viewport=1095%2C-674%2C0.14&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1256%3A6914&show-proto-sidebar=1&embed-host=share"
                   allowFullScreen

@@ -79,13 +79,13 @@ export const FARM_FEATURES = [
   {
     title: "Redefined visual",
     description:
-      "Developed a refreshed style guide with clear hierarchy and accessible colors.",
+      "I created a refreshed style guide with clear hierarchy and accessible colors.",
     images: { src: "/assets/farm/styleguide.png", alt: "style guide" },
   },
   {
     title: "Full website redesign with new pages and content",
     description:
-      "Rebuilt over 10 pages with a cohesive and scalable layout.",
+      "I rebuilt over 10 pages with a cohesive and scalable layout.",
     images: { src: "/assets/farm/redesign.png", alt: "redesign images" },   
   },
 ] as const;
@@ -128,7 +128,7 @@ export  const SWATCHES = [
 export const FARM_DETAIL: FarmDetail = {
   id: "stable-harvest-farm-redesign",
   title: "Stable Harvest Farm Website Redesign",
-  category: "Redesigned and built a non profit website for real users",
+  category: "Redesigned and built a non-profit website for real users",
   cover: "/assets/farm/cover.webm",
   coverHover: "/assets/farm/farm-video.webm",
   intro: {

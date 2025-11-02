@@ -4,16 +4,19 @@ import { NavLink } from "react-router-dom";
 import { NAVBAR } from "./const";
 import { NavItemContent } from "./NavItemContent";
 import { useTheme } from "./useTheme";
-import { NightIcon } from "../icons/NightIcon";
 import { SunIcon } from "../icons/SunIcon";
 import logo from "../../../public/assets/homepage/logo-white.svg";
 import logoLight from "../../../public/assets/homepage/logo-dark.svg";
+import { LocationClockSlide } from "./LocationClockSlide";
+import { Moon } from "lucide-react";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const logoSrc = theme === "dark" ? logo : logoLight;
   const MotionNavLink = motion(NavLink);
   const firstMount = useIsFirstMount();
+  const isDark = theme === "dark";
+  const flip = () => setTheme(isDark ? "light" : "dark");
 
   return (
     <header className="py-3 md:py-4 w-full absolute top-0 left-1/2 -translate-x-1/2 z-20">
@@ -77,44 +80,33 @@ export default function Navbar() {
         </nav>
 
         {/* Theme Toggle */}
-        <div className="flex items-center gap-4">
-          <p className="uppercase tracking-[1px] text-[12.5px] hidden md:block">
-            Vancouver, BC
-          </p>
-          <div className="flex items-center rounded-full button overflow-hidden">
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              aria-label="Toggle theme"
-              aria-pressed={theme === "dark"}
-              className="relative w-11 h-11 overflow-hidden rounded-full"
-            >
-              {/* Sun */}
-              <span className="absolute inset-0 flex items-center justify-center pointer-events-none rounded-full ">
-                <span
-                  className={`transition-all duration-500 ease-in-out transform-gpu ${
-                    theme === "dark"
-                      ? "translate-y-0 opacity-100"
-                      : "translate-y-8 opacity-0"
-                  }`}
-                >
-                  <SunIcon />
-                </span>
-              </span>
+        <div className="flex items-center gap-3">
+          <LocationClockSlide />
 
-              {/* Moon */}
-              <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span
-                  className={`transition-all duration-500 ease-in-out transform-gpu ${
-                    theme === "dark"
-                      ? "-translate-y-8 opacity-0"
-                      : "translate-y-0 opacity-100"
-                  }`}
-                >
-                  <NightIcon />
-                </span>
-              </span>
-            </button>
-          </div>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={isDark}
+            onClick={flip}
+            className="h-[28px] w-[48px] rounded-full bg-light-400/50 dark:bg-dark-300/80 border border-greyscale-200/40 dark:border-black relative shadow-block dark:shadow-blockDark"
+          >
+            <div
+              className={[
+                "absolute top-1/2 left-[2px] -translate-y-1/2 h-[23px] w-[23px] rounded-full bg-light-100 dark:bg-dark-700 inline-flex items-center justify-center transform-gpu transition-transform duration-300 ease-out will-change-transform",
+                isDark ? "translate-x-[19px]" : "translate-x-0",
+              ].join(" ")}
+            >
+              {!isDark ? (
+                <SunIcon className="w-[14px] text-dark-900 " strokeWidth={2} />
+              ) : (
+                <Moon
+                  className="w-[13px] text-white-100"
+                  fill="white"
+                  strokeWidth={2}
+                />
+              )}
+            </div>
+          </button>
         </div>
       </motion.div>
     </header>

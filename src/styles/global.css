@@ -15,7 +15,7 @@
     );
   }
   .dark {
-    --border-color: theme(colors.dark.400);
+    --border-color: theme(colors.dark.300);
     color-scheme: dark;
   }
 
@@ -57,7 +57,7 @@
   }
 
   .small {
-    @apply text-[14px] leading-[1.4] tracking-[.5px];
+    @apply text-[14px] leading-[1.4] tracking-[1px];
   }
   a {
     @apply cursor-pointer font-inter text-greyscale-500 dark:text-greyscale-300;
@@ -116,6 +116,14 @@
     background: linear-gradient(180deg, #2a2a2a, #313131, #333333);
   }
 
-
+@keyframes pickaxe-swing {
+  0%, 100% { transform: rotate(-18deg) translateY(0); }
+  50%      { transform: rotate(16deg)  translateY(1px); }
+}
+.pickaxe-anim {
+  transform-box: fill-box;
+  transform-origin: 20% 80%;
+  animation: pickaxe-swing 1200ms ease-in-out infinite;
+}
 
 }

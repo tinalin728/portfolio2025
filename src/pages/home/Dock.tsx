@@ -1,6 +1,7 @@
 import { Linkedin, Github, Mail, FolderDown } from "lucide-react";
 import { useDockWave } from "./useDockWave";
 import { Tooltip } from "../../components/buttons/Tooltip";
+import { Link } from "react-router-dom";
 
 type DockProps = React.HTMLAttributes<HTMLDivElement>;
 
@@ -17,7 +18,7 @@ export default function Dock() {
         href="https://www.linkedin.com/in/tina-lin-000613b5/"
         target="_blank"
         rel="noopener noreferrer"
-        className="dock-btn group "
+        className="dock-btn group"
       >
         <Linkedin
           className=" text-greyscale-400 dark:text-white-100 w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
@@ -65,7 +66,13 @@ export default function Dock() {
         aria-hidden
         className="h-5 w-px self-center dark:bg-dark-100 bg-light-400"
       />
-      <a href="mailto:contact@tinalin.ca" className="dock-btn group">
+      <a
+        href="/assets/resume.pdf"
+        aria-label="Resume"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="dock-btn group"
+      >
         <FolderDown
           className="text-greyscale-400 dark:text-white-100 w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
           strokeWidth={2}
