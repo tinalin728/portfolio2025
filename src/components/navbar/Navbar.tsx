@@ -19,7 +19,7 @@ export default function Navbar() {
   const flip = () => setTheme(isDark ? "light" : "dark");
 
   return (
-    <header className="py-3 md:py-4 w-full absolute top-0 left-1/2 -translate-x-1/2 z-20">
+    <header className="py-3 md:py-[18px] w-full absolute top-0 left-1/2 -translate-x-1/2 z-20">
       <motion.div
         initial={firstMount ? { y: -16, opacity: 0 } : false}
         animate={{ y: 0, opacity: 1 }}
