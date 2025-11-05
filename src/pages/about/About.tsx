@@ -29,7 +29,7 @@ export default function About() {
         image={imageAbs}
         type="profile"
       />
-      <section className="relative z-10 bg-light-300 dark:bg-dark-700 mt-[8rem] pb-[6rem]  flex flex-col justify-between h-full md:overflow-visible">
+      <section className="relative z-10 bg-light-300 dark:bg-dark-700 mt-[8rem] pb-[4rem] lg:pb-[6rem] flex flex-col justify-between h-full md:overflow-visible">
         <motion.div
           initial={{ opacity: 0, y: 27 }}
           animate={{ opacity: 1, y: 0 }}
@@ -169,7 +169,7 @@ export default function About() {
                 className="flex justify-between lg:gap-20 py-4 md:py-10 border-b last:border-0 group"
               >
                 <div className="w-full xl:basis-[80%]">
-                  <h5 className="flex gap-2 flex-col lg:flex-row">
+                  <h5 className="flex gap-2 flex-wrap">
                     <span className="relative">
                       {exp.role} at
                       <img
