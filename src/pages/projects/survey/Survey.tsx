@@ -76,7 +76,7 @@ export default function Survey() {
       <ProjectIntroWrapper>
         <Seo
           title={`${p.title} | Tina Lin`}
-          description={p.intro?.subtitle ?? "Tim Horton's App Redesign"}
+          description={p.intro?.subtitle ?? "Mobile Survey Experience Design"}
           url={`${origin}/${p.id}`}
           type="article"
         />
@@ -95,6 +95,7 @@ export default function Survey() {
           <img
             src={p.intro.src}
             alt="Project banner"
+            loading="lazy"
             className="w-full h-full rounded-xl max-w-[1200px] mx-auto"
           />
         </div>
