@@ -13,7 +13,7 @@ export const SURVEY_SECTIONS = [
 
 export const SURVEY_DETAIL: SurveyDetail = {
   id: "survey",
-  title: "Mobile Survey Experience Design",
+  title: "Mobile Survey Experience Design [LOCKED]",
   category: "Making post-simulation surveys more intuitive for students",
   cover: "/assets/survey/cover.jpg",
   coverHover: "/assets/survey/final.webm",

@@ -74,6 +74,12 @@ export default function Survey() {
   return (
     <>
       <ProjectIntroWrapper>
+        <Seo
+          title={`${p.title} | Tina Lin`}
+          description={p.intro?.subtitle ?? "Tim Horton's App Redesign"}
+          url={`${origin}/${p.id}`}
+          type="article"
+        />
         <ProjectIntro {...p.intro}></ProjectIntro>
         <Sidebar
           sections={SURVEY_SECTIONS}
@@ -211,7 +217,7 @@ export default function Survey() {
 
                 <div className="flex flex-col gap-6 mb-6">
                   {p.directions.map((d, index) => (
-                    <div className="flex gap-4 items-start">
+                    <div key={index} className="flex gap-4 items-start">
                       <div>
                         <h5 className="mb-1 border-l-2 border-blue-500 pl-[14px]">
                           {d.title}

@@ -1,5 +1,5 @@
 import type { ProjectCard } from "../types";
-import { LucideIcon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface designDirection {
   title: string;

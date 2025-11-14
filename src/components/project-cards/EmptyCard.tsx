@@ -1,4 +1,3 @@
-import React from "react";
 import { Pickaxe } from "lucide-react";
 import placeholder from "../../../public/assets/homepage/mockup.jpg";
 
