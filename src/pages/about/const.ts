@@ -44,8 +44,7 @@ export const EXPERIENCES = [
     logoSrc: "/assets/about/simu.svg",
     alt: "Simnuhealth logo",
     content: [
-      "Ran QA with TypeScript and Remix, fixed styling and functional issues, raised accessibility quality.",
-      "Supported designers with consistent components, UX research, and early product ideation."
+      "Performed quality assurance testing to detect and fix UI bugs in a TypeScript and Remix-based application, collaborating with cross-functional team members",
     ],
      logoClass: "w-12 lg:translate-x-[3rem] lg:group-hover:translate-x-[3.5rem]",
      companyClass: "lg:group-hover:translate-x-14"
