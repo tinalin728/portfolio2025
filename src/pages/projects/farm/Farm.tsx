@@ -41,7 +41,7 @@ export default function Farm() {
       <ProjectIntroWrapper>
         <Seo
           title={`${p.title} | Tina Lin`}
-          description={p.intro?.subtitle ?? "Tim Horton's App Redesign"}
+          description={p.intro?.subtitle}
           url={`${origin}/${p.id}`}
           type="article"
         />
