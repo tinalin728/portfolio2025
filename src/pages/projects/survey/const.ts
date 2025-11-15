@@ -21,7 +21,7 @@ export const SURVEY_DETAIL: SurveyDetail = {
     title: "Mobile Survey Experience Design",
     subtitle: "UX case study",
     timeline: "3 weeks, June 2025",
-    role: "UX/UI designer",
+    role: "UX/UI designer, Design Intern",
     tools: "Figma",
     src: "/assets/survey/banner.jpg",
   },

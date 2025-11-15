@@ -87,8 +87,8 @@ export default function Survey() {
           mobileTitle="Mobile Survey Design"
         />
         <div
-          className="py-10 w-full h-full md:max-container relative z-10 
-          before:content-[''] before:absolute before:inset-0 
+          className="py-10 w-full h-full md:max-container relative
+          before:content-[''] before:absolute before:inset-0 before:z-0
           before:bg-[linear-gradient(180deg,_rgba(16,16,16,0)_40%,_#E3E3E3_100%)]
           dark:before:bg-[linear-gradient(180deg,_rgba(16,16,16,0)_40%,_#101010_100%)]"
         >
@@ -96,7 +96,7 @@ export default function Survey() {
             src={p.intro.src}
             alt="Project banner"
             loading="lazy"
-            className="w-full h-full rounded-xl max-w-[1200px] mx-auto"
+            className="w-full h-full rounded-xl max-w-[1200px] mx-auto z-10 relative"
           />
         </div>
 
@@ -105,7 +105,7 @@ export default function Survey() {
             <div className="section-gap">
               <div className="mb-14 md:mb-20">
                 <p className="tagline mb-4">About the company</p>
-                <h3 className="mb-2">SimuHealth</h3>
+                <h3 className="mb-2">Simuhealth</h3>
                 <p>
                   SimuHealth is a platform that helps healthcare organizations
                   run their simulation and training programs. It brings together
@@ -165,7 +165,7 @@ export default function Survey() {
                 </p>
 
                 <div className="my-10 border dark:border-black bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark rounded-xl">
-                  <img src={BCITSurvey} alt="" />
+                  <img src={BCITSurvey} alt="bcit survey" />
                 </div>
 
                 <p className="mb-4">
@@ -369,7 +369,7 @@ export default function Survey() {
                   className="rounded-xl overflow-hidden border dark:border-black p-2 bg-light-300/80 dark:bg-dark-700/50 shadow-block dark:shadow-blockDark"
                 >
                   <iframe
-                    src="https://embed.figma.com/proto/gOZRNIVLPWs3hKnUtlTop1/survey?page-id=88%3A5169&node-id=88-5936&p=f&viewport=-49%2C143%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A5715&embed-host=share"
+                    src="https://embed.figma.com/proto/gOZRNIVLPWs3hKnUtlTop1/survey?page-id=88%3A5169&node-id=88-5715&viewport=50%2C224%2C0.29&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A5715&embed-host=share"
                     allowFullScreen
                     className="w-full h-[600px] md:h-[700px] lg:h-[800px] rounded-lg"
                   ></iframe>
